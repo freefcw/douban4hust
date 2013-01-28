@@ -2,7 +2,7 @@
 // @name			douban_whu
 // @namespace		douban_whu
 // @require			http://userscript-autoupdate-helper.googlecode.com/svn/trunk/autoupdatehelper.js
-// @version			7.0
+// @version			7.1
 /* @reason
 	change to new server
 @end*/
@@ -33,7 +33,7 @@ updater.check(24); //检查是否有更新
 
 $(document).ready(function(){
 	// get book title
-	var title = $('h1').text();
+	var title = $('h1 span').text();
 	//title = encodeURI(title);
 	// get book isbn
 	$("#info .pl").each(function(i){

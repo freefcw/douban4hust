@@ -22,7 +22,7 @@ if(typeof unsafeWindow.jQuery !== "undefined") {
 var thisScript = {
 name: "douban_HUST", //脚本名称，请自行修改
 id: "39921", //脚本在userscripts.org的id，请自行修改
-version:"6.0" // 当前脚本版本号，请自行修改
+version:"6.1" // 当前脚本版本号，请自行修改
 }
 var updater = new Updater(thisScript); // 用thisScript对象创建一个更新器对象
 updater.check(24); //检查是否有更新
@@ -42,7 +42,7 @@ function insertfind(title)
 	
 $(document).ready(function(){
 	// get book title
-	var title = $('h1').text();
+	var title = $('h1 span').text();
 	//提前是为了防止出现没有isbn的书
 	var isbn = null;
 	//title = encodeURI(title);
